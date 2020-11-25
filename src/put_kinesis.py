@@ -17,12 +17,12 @@ def show_s3bucket():
     bucket = s3.Bucket('test-bucket')
     print(bucket.name)
 
-    PUT_OBJECT_KEY_NAME = 'hayate.txt'
+    PUT_OBJECT_KEY_NAME = 'sample.txt'
 
     obj = bucket.Object(PUT_OBJECT_KEY_NAME)
 
-    body = """盛岡〜新函館北斗 1往復
-    新青森〜新函館北斗 1往復
+    body = """test01: abc
+    test02: 123
     """
 
     response = obj.put(
